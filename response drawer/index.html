@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        This page demonstrates a sliding sidebar menu.
+        The drawer can collapse and expand to hide or show navigation.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+      <!--
+          sidebar is the left panel.
+          It gets a collapsed class when hidden.
+      -->
+      <div id="drawer" class="sidebar">Sidebar Menu</div>
+
+      <div class="content">
+        <!--
+            This button toggles the drawer open or closed.
+        -->
+        <button onclick="toggleDrawer()">☰ Toggle Menu</button>
+      </div>
+    </div>
+</body>
+</html>

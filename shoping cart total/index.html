@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+        This page shows a shopping cart with one product row.
+        It includes quantity buttons, subtotal, total, and a discount badge.
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!--
+        The table structure helps display a cart item with columns:
+        item, price, quantity, and subtotal.
+    -->
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="cartBody">
+        <tr data-price="25">
+          <td>Wireless Mouse</td>
+          <td>$25</td>
+          <td>
+            <!--
+                These buttons change the quantity by -1 and +1.
+                The JavaScript function adjustQty() updates the subtotal and total.
+            -->
+            <button class="btn" onclick="adjustQty(this, -1)">-</button>
+            <span class="qty">1</span>
+            <button class="btn" onclick="adjustQty(this, 1)">+</button>
+          </td>
+          <td class="subtotal">$25.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--
+        Total is shown at the bottom.
+        If the subtotal is above 100, a 10% discount is applied.
+    -->
+    <h4>
+      Total: $<span id="cartTotal">25.00</span>
+      <span id="cartBadge" class="badge">10% Discount</span>
+    </h4>
+  </body>
+</html>

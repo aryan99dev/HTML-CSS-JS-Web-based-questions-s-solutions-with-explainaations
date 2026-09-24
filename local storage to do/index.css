@@ -1,0 +1,29 @@
+/*
+    CSS for the to-do list.
+    It removes the default bullet points from the list and gives each task a clean row style.
+*/
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*
+    li is each to-do item in the list.
+    cursor: pointer tells the browser that the item is clickable.
+    border-bottom adds a subtle line between tasks.
+*/
+li {
+  padding: 6px;
+  cursor: pointer;
+  border-bottom: 1px solid #334155;
+}
+
+/*
+    When a task is completed, the item gets a line-through effect and gray text.
+    This visually tells the user the task is done.
+*/
+li.completed {
+  text-decoration: line-through;
+  color: #64748b;
+}

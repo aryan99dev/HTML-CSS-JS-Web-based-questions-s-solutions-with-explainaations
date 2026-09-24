@@ -1,0 +1,31 @@
+/*
+    This CSS creates a responsive sidebar layout.
+    The wrapper keeps the menu and content side by side.
+*/
+
+.wrapper {
+  display: flex;
+  height: 150px;
+  border: 1px solid #334155;
+}
+
+/*
+    The sidebar is a fixed-width column.
+    transition: width 0.3s makes the collapse smooth and animated.
+    overflow: hidden hides any text when the drawer is collapsed.
+*/
+.sidebar {
+  width: 120px;
+  background: #0284c7;
+  transition: width 0.3s;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/*
+    When the collapsed class is added, the width becomes 0.
+    That makes the sidebar disappear from view.
+*/
+.sidebar.collapsed {
+  width: 0;
+}

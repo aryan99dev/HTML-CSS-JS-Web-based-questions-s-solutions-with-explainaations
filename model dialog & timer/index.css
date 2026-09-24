@@ -1,0 +1,31 @@
+/*
+    CSS for the modal popup.
+    The overlay covers the whole screen and dims the background.
+*/
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: grid;
+  place-items: center;
+}
+
+/*
+    The modal content box is centered over the page.
+    padding creates internal space, and border-radius makes the corners rounded.
+*/
+.modal-content {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/*
+    .hidden is a utility class used to hide something completely.
+    !important forces the browser to respect this display rule.
+*/
+.hidden {
+  display: none !important;
+}

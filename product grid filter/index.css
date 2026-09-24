@@ -1,0 +1,20 @@
+/*
+    This CSS creates a two-column product grid.
+    grid-template-columns: 1fr 1fr means two equal-width columns.
+*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/*
+    Each product card is a box with a dark background and rounded corners.
+*/
+.pCard {
+  background: #334155;
+  padding: 12px;
+  border-radius: 4px;
+}

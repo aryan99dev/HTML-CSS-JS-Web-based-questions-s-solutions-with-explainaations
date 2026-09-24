@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        This page is a small student management form.
+        It has input fields for the student's name and mark,
+        plus a dropdown to filter pass/fail records.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--
+        form: groups the inputs and button together.
+        Each input has an id that JavaScript can use to read its value.
+    -->
+    <div class="form">
+      <input type="text" id="sName" placeholder="Student Name" />
+      <input type="number" id="sMarks" placeholder="Marks (0-100)" />
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <!--
+        This dropdown allows a filter:
+        - all: show all students
+        - pass: show only passing students
+        - fail: show only failing students
+    -->
+    <select id="" onchange="filterStudents(this.value)">
+      <option value="all">All</option>
+      <option value="pass">Pass Only</option>
+      <option value="fail">Fail Only</option>
+    </select>
+
+    <!--
+        table: used to display list of students in rows.
+        tbody id="sBody" is empty at first; JavaScript fills it dynamically.
+    -->
+    <table>
+      <thead><tr><th>Name</th><th>Marks</th><th>Status</th></tr></thead>
+      <tbody id="sBody"></tbody>
+    </table>
+</body>
+</html>

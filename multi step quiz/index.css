@@ -1,0 +1,23 @@
+/*
+    This CSS file makes each quiz step look like a card.
+    It also controls the hidden state for question panels.
+*/
+
+.q-step {
+  padding: 12px;
+  background: #1e293b;
+  border-radius: 6px;
+}
+
+/*
+    .hidden is a reusable class that hides any element completely.
+*/
+.hidden {
+  display: none !important;
+}
+
+.nav-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}

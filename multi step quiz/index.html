@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        This page creates a quiz with multiple steps.
+        Only one question is visible at a time.
+        We use JavaScript to move between the questions.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--
+        q1 is the first question panel.
+        Radio buttons allow only one choice from a group.
+        The value is either 1 (correct) or 0 (wrong).
+    -->
+    <div id="q1" class="q-step">
+      <p>Q1: Is JS single-threaded?</p>
+      <label><input type="radio" name="q1" value="1"> Yes</label>
+      <label><input type="radio" name="q1" value="0"> No</label>
+    </div>
+
+    <!--
+        q2 is hidden initially.
+        hidden is a CSS class that hides the element.
+        Later, JavaScript removes it when it is time to show this question.
+    -->
+    <div id="q2" class="q-step hidden">
+      <p>Q2: Does CSS mean Cascading Style Sheets?</p>
+      <label><input type="radio" name="q2" value="1"> Yes</label>
+      <label><input type="radio" name="q2" value="0"> No</label>
+    </div>
+
+    <!--
+        Navigation buttons let the user move between questions.
+        Prev goes backward; Next goes forward.
+    -->
+    <div class="nav-btns">
+      <button id="qPrev" onclick="navStep(-1)" disabled>Prev</button>
+      <button id="qNext" onclick="navStep(1)">Next</button>
+    </div>
+
+    <!--
+        qScore is hidden until the end.
+        When the quiz is submitted, JavaScript fills it with the score.
+    -->
+    <h4 id="qScore" class="hidden"></h4>
+</body>
+</html>

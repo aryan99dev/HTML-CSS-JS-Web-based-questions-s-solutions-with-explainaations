@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        This page demonstrates tabs and a notification badge.
+        Tabs let the user switch between panels.
+        The badge counts notifications.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--
+        The tab buttons are separate from the content panels.
+        The active button is highlighted with the .active class.
+    -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab(1)">Profile</button>
+      <button class="tab-btn" onclick="switchTab(2)">Alerts (<span id="nBadge">0</span>)</button>
+    </div>
+
+    <!--
+        Two panels are available.
+        Only the selected panel is visible at any time.
+    -->
+    <div id="tab1" class="tPane">Profile Panel Content</div>
+    <div id="tab2" class="tPane hidden">Alerts Panel Content</div>
+
+    <!--
+        This button increases the number shown in the badge.
+    -->
+    <button onclick="incBadge()">Trigger Notification</button>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        This page is a product search/filter example.
+        The user can search by name and also choose a category.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--
+        Search box: as the user types, the filterGrid() function runs.
+        This instantly narrows down the visible products.
+    -->
+    <input type="text" id="pSearch" placeholder="Search product..." oninput="filterGrid()" />
+
+    <!--
+        Category filters use radio buttons.
+        Only one category can be selected at a time.
+        onchange="filterGrid()" means the list updates when the user changes the selection.
+    -->
+    <div class="categories" onchange="filterGrid()">
+      <label><input type="radio" name="pCat" value="all" checked> All</label>
+      <label><input type="radio" name="pCat" value="tech"> Tech</label>
+      <label><input type="radio" name="pCat" value="book"> Books</label>
+    </div>
+
+    <!--
+        The product cards are simple boxes.
+        Each card has a data-cat attribute that tells JavaScript its category.
+    -->
+    <div class="grid">
+      <div class="pCard" data-cat="tech">Laptop</div>
+      <div class="pCard" data-cat="book">JS Handbook</div>
+    </div>
+</body>
+</html>

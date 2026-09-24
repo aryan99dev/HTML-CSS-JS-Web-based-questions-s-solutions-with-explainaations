@@ -1,0 +1,41 @@
+/*
+    This CSS file styles the textarea and the progress bar.
+    CSS controls the appearance of HTML elements:
+    colors, size, spacing, borders, and layout.
+*/
+
+/*
+    The textarea is the large box where users type.
+    width: 100% makes it stretch across the available width.
+    height: 60px gives it a medium height.
+    background and color control the text and box colors.
+*/
+textarea {
+  width: 100%;
+  height: 60px;
+  background: #334155;
+  color: #fff;
+}
+
+/*
+    The progress track is the full background line behind the filled bar.
+    overflow: hidden keeps the fill inside the bar's boundaries.
+*/
+.progress-track {
+  background: #334155;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/*
+    The progress fill is the inner colored piece that grows.
+    width: 0% starts empty and is later changed by JavaScript.
+    transition: width 0.1s adds a smooth animation as it updates.
+*/
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #38bdf8;
+  transition: width 0.1s;
+}

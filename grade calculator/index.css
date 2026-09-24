@@ -1,0 +1,42 @@
+/*
+    This CSS file styles the form and the table.
+    It gives the UI a dark theme and highlights pass/fail results.
+*/
+
+/*
+    .form is a container for the input boxes and button.
+    display: flex makes the items sit next to each other.
+    gap adds space between the children.
+*/
+.form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/*
+    input and select are styled the same way.
+    They get padding, dark background, white text, and a subtle border.
+*/
+input,
+select {
+  padding: 6px;
+  background: #334155;
+  color: #fff;
+  border: 1px solid #475569;
+}
+
+/*
+    .pass and .fail are custom CSS classes used by JavaScript.
+    When a row is marked pass, we set green text.
+    When a row is marked fail, we set red text.
+*/
+.pass {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.fail {
+  color: #f87171;
+  font-weight: bold;
+}

@@ -1,0 +1,36 @@
+/*
+    This CSS gives visual feedback to the password strength.
+    Different border colors show weak, medium, or strong passwords.
+*/
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 2px solid #334155;
+}
+
+/*
+    These classes are added by JavaScript based on password quality.
+    Each class uses a different color so the user can understand the result quickly.
+*/
+input.weak {
+  border-color: #ef4444;
+}
+
+input.medium {
+  border-color: #f59e0b;
+}
+
+input.strong {
+  border-color: #22c55e;
+}
+
+/*
+    Disabled buttons become faded and unclickable.
+    This tells the user they must fix the form first.
+*/
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        This page demonstrates a modal popup.
+        A modal is a pop-up layer that appears over the page.
+        It is often used for offers, warnings, or forms.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--
+        This button opens the modal when clicked.
+        The JavaScript function toggleModal(true) makes the popup visible.
+    -->
+    <button onclick="toggleModal(true)">Open Promo Modal</button>
+
+    <!--
+        demoModal is the full-screen overlay.
+        hidden makes it invisible at first.
+        The onclick is attached to the overlay itself, so clicking outside the modal closes it.
+    -->
+    <div id="demoModal" class="modal-overlay hidden" onclick="closeOnBackdrop(event)">
+      <div class="modal-content">
+        <h3>🔥 Exclusive Offer!</h3>
+        <p>Get 20% Off your purchase!</p>
+        <button onclick="toggleModal(false)">Close</button>
+      </div>
+    </div>
+</body>
+</html>

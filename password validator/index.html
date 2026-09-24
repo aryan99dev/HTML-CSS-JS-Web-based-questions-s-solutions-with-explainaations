@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        This page creates a password validation form.
+        The user enters a password and confirms it.
+        The button stays disabled until the password is strong enough and matches.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--
+        The first password field is where the user types the password.
+        oninput="valPass()" means as soon as the user types, JavaScript runs validation.
+    -->
+    <input type="password" id="p1" placeholder="Password" oninput="valPass()" />
+
+    <!--
+        The second field confirms the password.
+        It is also checked using the same validation function.
+    -->
+    <input type="password" id="p2" placeholder="Confirm Password" oninput="valPass()" />
+
+    <!--
+        This button is disabled by default.
+        It becomes clickable only when the password is valid and matches.
+    -->
+    <button id="pSub" disabled>Submit Registration</button>
+</body>
+</html>

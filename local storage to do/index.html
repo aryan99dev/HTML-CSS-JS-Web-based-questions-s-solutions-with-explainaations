@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        This is a simple to-do list app.
+        It lets the user type a task, add it, and click a task to mark it complete.
+        The data is saved in localStorage so it remains after a page refresh.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--
+        .input-row groups the input box and button.
+        When the button is clicked, JavaScript reads the task text and adds it to the list.
+    -->
+    <div class="input-row">
+      <input type="text" id="tInp" placeholder="Enter task..." />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!--
+        The list is empty at first.
+        JavaScript generates <li> items and inserts them here.
+    -->
+    <ul id="tList"></ul>
+</body>
+</html>

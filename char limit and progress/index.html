@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        This is the basic HTML skeleton of the page.
+        Every browser reads the page in this order:
+        1. head: information about the page and linked files
+        2. body: what appears on the screen
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--
+        We link the CSS file so the page gets colors, spacing, and layout styles.
+        We also load the JavaScript file with defer so the script runs after the page loads.
+    -->
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--
+        textarea: a big text box where the user can type.
+        maxlength="100": the user cannot type more than 100 characters.
+        oninput="updateLimit(this)": every time the user types, JavaScript runs updateLimit().
+    -->
+    <textarea id="lblTxt" maxlength="100" oninput="updateLimit(this)"></textarea>
+
+    <!--
+        This element shows the live count like: 20 / 100.
+        It is updated by JavaScript as the user types.
+    -->
+    <div id="lblCount">0 / 100</div>
+
+    <!--
+        The progress bar has two layers:
+        - outer track: the background line
+        - inner fill: the colored part that grows as the user types
+    -->
+    <div class="progress-track">
+      <div id="lblBar" class="progress-fill"></div>
+    </div>
+</body>
+</html>
