@@ -26,6 +26,24 @@ input.strong {
   border-color: #22c55e;
 }
 
+#passwordStrength {
+  min-height: 1.25em;
+  margin: 0 0 8px;
+  font-weight: bold;
+}
+
+#passwordStrength.weak {
+  color: #ef4444;
+}
+
+#passwordStrength.medium {
+  color: #f59e0b;
+}
+
+#passwordStrength.strong {
+  color: #22c55e;
+}
+
 /*
     Disabled buttons become faded and unclickable.
     This tells the user they must fix the form first.
